@@ -4,6 +4,8 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: badjeff
       url-base: https://github.com/badjeff
+    - name: brokenax3
+      url-base: https://github.com/brokenax3
   projects:
     - name: zmk
       remote: zmkfirmware
@@ -12,6 +14,9 @@ manifest:
     - name: zmk-pmw3610-driver
       remote: badjeff
       revision: main
-      
+    - name: zmk-behavior-socd
+      remote: brokenax3
+      revision: main
+       
   self:
     path: config
