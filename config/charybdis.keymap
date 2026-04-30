@@ -5,15 +5,6 @@
 #include <dt-bindings/zmk/pointing.h>
 
 / {
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-
-        tri_layer {
-            if-layers = <2 3>;
-            then-layer = <4>;
-        };
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
@@ -51,8 +42,8 @@
 &kp TAB    &kp EXCL  &kp AT    &kp HASH   &kp DLLR   &kp PIPE     &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR   &kp RPAR  &none
 &kp LSHFT  &none     &kp BSLH  &kp UNDER  &kp MINUS  &kp TILDE    &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &none     &kp RSHFT
 &kp LCTRL  &none     &kp FSLH  &kp EQUAL  &kp PLUS   &kp GRAVE    &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &none     &kp ENTER
-                               &trans     &trans     &trans       &trans     &trans
-                                          &trans     &trans       &trans
+                           &kp SPACE  &trans     &lt 5 ESC    &kp ENTER   &mo 4
+                                      &kp LGUI  &kp LALT     &kp BSPC
             >;
         };
 
@@ -64,8 +55,8 @@
 &kp TAB    &none   &none   &kp LBRC  &kp RBRC  &none      &none   &kp LBRC  &kp RBRC  &none   &kp SEMI  &none
 &kp LSHFT  &none   &none   &kp LBKT  &kp RBKT  &kp DQT    &none   &kp LBKT  &kp RBKT  &none   &none     &kp RSHFT
 &kp LCTRL  &none   &none   &kp LPAR  &kp RPAR  &kp SQT    &none   &kp LPAR  &kp RPAR  &none   &none     &kp ENTER
-                           &trans    &trans    &trans     &trans  &trans
-                                     &trans    &trans     &trans
+                           &kp SPACE  &mo 4     &lt 5 ESC    &kp ENTER   &trans
+                                      &kp LGUI  &kp LALT     &kp BSPC
             >;
         };
 
@@ -77,8 +68,8 @@
 &none  &to 0       &to 1         &none         &none         &none           &none   &bt BT_PRV  &bt BT_NXT  &none  &bootloader  &none
 &none  &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3    &none   &none       &none       &none  &none        &none
 &none  &none       &none         &none         &none         &none           &none   &none       &none       &none  &none        &none
-                                 &trans        &trans        &trans          &trans  &trans
-                                               &trans        &trans          &trans
+                           &kp SPACE  &trans     &lt 5 ESC    &kp ENTER   &trans
+                                      &kp LGUI  &kp LALT     &kp BSPC
             >;
         };
 
